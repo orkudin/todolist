@@ -1,6 +1,6 @@
-import { useState, useContext } from 'react';
+import { useState} from 'react';
 import { Todo } from '../types/Todo';
-import { TodoContext } from '../context/TodoContext';
+import { useTodoContext } from '../context/TodoContext';
 
 interface Props {
   todo: Todo;
@@ -8,7 +8,7 @@ interface Props {
 }
 
 const TodoItem = ({ todo, showStatus }: Props) => {
-  const { deleteTodo, updateTodo, changeStatus } = useContext(TodoContext)!;
+  const { deleteTodo, updateTodo, changeStatus } = useTodoContext()!;
   const [isEditing, setIsEditing] = useState(false);
   const [title, setTitle] = useState(todo.title);
   const [description, setDescription] = useState(todo.description || '');
