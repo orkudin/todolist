@@ -1,0 +1,199 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f9fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.app {
+  width: 500px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Форма добавления */
+.add-todo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-todo input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.add-todo button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-todo button:hover {
+  background-color: #45a049;
+}
+
+/* Кнопки фильтрации */
+.filter-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+.filter-buttons button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.filter-buttons button.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.filter-buttons button:hover {
+  background-color: #ddd;
+}
+
+/* Контейнер задач */
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.todo-item {
+  background: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  position: relative;
+}
+
+.todo-item h3 {
+  margin: 5px 0;
+  color: #333;
+}
+
+.todo-item p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Кнопки задачи */
+.todo-item button {
+  margin-top: 8px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+  margin-right: 5px;
+}
+
+.todo-item button:nth-child(2) {
+  background-color: #ff9800;
+  color: white;
+}
+
+.todo-item button:nth-child(2):hover {
+  background-color: #e68900;
+}
+
+.todo-item button:nth-child(3) {
+  background-color: #2196f3;
+  color: white;
+}
+
+.todo-item button:nth-child(3):hover {
+  background-color: #0b7dda;
+}
+
+.todo-item button:nth-child(4) {
+  background-color: #f44336;
+  color: white;
+}
+
+.todo-item button:nth-child(4):hover {
+  background-color: #d32f2f;
+}
+
+/* Поле поиска */
+.search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Метка статуса */
+.status-label {
+  display: inline-block;
+  background-color: #e0e0e0;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+
+
+/* Режим редактирования */
+.edit-mode {
+  background: #f0f8ff;
+  border: 1px solid #4caf50;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+/* Поля ввода в режиме редактирования */
+.edit-mode input {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #4caf50;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Кнопка сохранения */
+.edit-mode button {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.edit-mode button:hover {
+  background-color: #45a049;
+}
