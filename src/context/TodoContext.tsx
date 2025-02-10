@@ -1,4 +1,4 @@
-import React, { createContext, useState, ReactNode } from 'react';
+import { createContext, useState, ReactNode } from 'react';
 import { Todo } from '../types/Todo';
 import { v4 as uuidv4 } from 'uuid';
 

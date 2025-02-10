@@ -1,8 +1,8 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { TodoContext } from '../context/TodoContext';
 import TodoItem from './TodoItem';
 
-const TodoList: React.FC = () => {
+const TodoList = () => {
   const { todos } = useContext(TodoContext)!;
   const [filter, setFilter] = useState<'all' | 'in_plans' | 'in_progress' | 'completed'>('all');
   const [searchTerm, setSearchTerm] = useState('');

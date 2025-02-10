@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import { useState, useContext } from 'react';
 import { Todo } from '../types/Todo';
 import { TodoContext } from '../context/TodoContext';
 
@@ -7,7 +7,7 @@ interface Props {
   showStatus: boolean;
 }
 
-const TodoItem: React.FC<Props> = ({ todo, showStatus }) => {
+const TodoItem = ({ todo, showStatus }: Props) => {
   const { deleteTodo, updateTodo, changeStatus } = useContext(TodoContext)!;
   const [isEditing, setIsEditing] = useState(false);
   const [title, setTitle] = useState(todo.title);

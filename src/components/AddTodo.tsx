@@ -1,7 +1,7 @@
-import React, { useState, useContext } from 'react';
+import { useState, useContext } from 'react';
 import { TodoContext } from '../context/TodoContext';
 
-const AddTodo: React.FC = () => {
+const AddTodo = () => {
   const { addTodo } = useContext(TodoContext)!;
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
